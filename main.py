@@ -18,7 +18,7 @@ def rename_mp3_files(directory):
             track_title = audiofile.tag.title
             track_number = audiofile.tag.track_num[0] if audiofile.tag.track_num else ""
 
-            # Remove any invalid characters from filenames
+            # Remove any invalid characters from the filenames
             artist = re.sub(r'[\\/*?:"<>|]', "", artist)
             track_title = re.sub(r'[\\/*?:"<>|]', "", track_title)
             track_number = re.sub(r'[\\/*?:"<>|]', "", str(track_number).zfill(2))
